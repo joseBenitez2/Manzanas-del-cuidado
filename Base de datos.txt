@@ -1,0 +1,135 @@
+DROP DATABASE manzanas;
+
+
+
+
+
+CREATE DATABASE manzanas
+ DEFAULT CHARACTER SET = 'utf8mb4'
+
+
+
+
+
+
+USE manzanas;
+
+
+
+
+
+
+CREATE TABLE manzanas (
+    Codigo_manzanas int(5) PRIMARY KEY AUTO_INCREMENT,
+    Nombre_manzanas varchar(30),
+    Localidad  SET ('BOSA', 'SUBA', 'USME'),
+    Direccion VARCHAR(50)
+);
+
+
+
+
+
+
+CREATE TABLE servicios (
+    Codigo_servicios  int(5) PRIMARY KEY AUTO_INCREMENT,
+    Nombre_servicio   varchar(30),
+    Tipo_servicio     varchar(30),
+    Descripcion       varchar(100)
+);
+
+
+
+
+
+
+CREATE TABLE manzanas_servicios (
+    fk_codigo_manzanas1 int(5),
+    fk_codigo_servicios1 int(5),
+    PRIMARY KEY (fk_codigo_manzanas1, fk_codigo_servicios1),
+    FOREIGN KEY (fk_codigo_manzanas1) REFERENCES manzanas(Codigo_manzanas),
+     FOREIGN KEY (fk_codigo_servicios1) REFERENCES servicios(Codigo_servicios)
+);
+
+
+
+
+
+
+CREATE TABLE usuario (
+    Codigo_mujer int(5) PRIMARY KEY AUTO_INCREMENT,
+    Tipo_documento SET ('TI','CC'),
+    Documento int(10),
+    Nombres varchar(30),
+    Apellidos varchar(30),
+    Telefono int(10),
+    Email varchar(100),
+    Ciudad varchar(50),
+    Direccion_usu varchar(50),
+    Ocupacion varchar(30),
+    Rol SET ('Usuario','Administrador'),
+    fk_Codigo_manzanas int(5),
+    FOREIGN KEY (fk_Codigo_manzanas) REFERENCES manzanas(Codigo_manzanas),
+    fk_Codigo_servicios2 int(5),
+    FOREIGN KEY (fk_Codigo_servicios2) REFERENCES servicios(Codigo_servicios)
+);
+
+
+
+
+CREATE TABLE solicitudes (
+    Codigo_solicitud int(5) PRIMARY KEY AUTO_INCREMENT,
+    Municipios varchar(30),
+    Dia_Hora DATETIME ,
+    Nombre_establecimiento varchar(100),
+    Responsable_establecimiento varchar(30),
+    Direccion_establecimiento VARCHAR (50),
+    fk_Codigo_mujer2 int(10),
+    FOREIGN KEY (fk_Codigo_mujer2) REFERENCES usuario(Codigo_mujer),
+    fk_Codigo_servicios3 int(5),
+    FOREIGN KEY (fk_Codigo_servicios3) REFERENCES servicios(Codigo_servicios)
+);
+
+
+
+
+
+
+INSERT INTO manzanas (Codigo_manzanas,Nombre_manzanas,Localidad,Direccion) VALUES (1,"Manzana Bosa #2","Bosa","Kr falsa 12");
+INSERT INTO manzanas (Codigo_manzanas,Nombre_manzanas,Localidad,Direccion) VALUES (2,"Manzana Suba #19","Suba","Kr falsa 22"); 
+INSERT INTO manzanas (Codigo_manzanas,Nombre_manzanas,Localidad,Direccion) VALUES (3,"Manzana Usme #43","Usme","Kr falsa 32");
+INSERT INTO servicios (Codigo_servicios,Nombre_servicio,Tipo_servicio,Descripcion ) values (1,"Clases de danza","Entretenimiento" ,"Clase para el aprendizaje de dansas");
+INSERT INTO servicios (Codigo_servicios,Nombre_servicio,Tipo_servicio,Descripcion ) values (2,"Teatro","Entretenimiento" ,"Obras de teatro realizadas para jovenes");
+INSERT INTO servicios (Codigo_servicios,Nombre_servicio,Tipo_servicio,Descripcion ) values (3,"Natacion","Entretenimiento" ,"Espacio para practicar natacion");
+INSERT INTO servicios (Codigo_servicios,Nombre_servicio,Tipo_servicio,Descripcion ) values (4,"Canto","Entretenimiento" ,"Clase para el aprendizaje del canto");
+INSERT INTO servicios (Codigo_servicios,Nombre_servicio,Tipo_servicio,Descripcion ) values (5,"Artes","Entretenimiento" ,"Espacio para la practica de diferentes artes plasticas");
+
+
+INSERT INTO manzanas_servicios ( fk_codigo_manzanas1 ,fk_codigo_servicios1) VALUES (1,2);
+INSERT INTO manzanas_servicios ( fk_codigo_manzanas1 ,fk_codigo_servicios1) VALUES (1,4);
+INSERT INTO manzanas_servicios ( fk_codigo_manzanas1 ,fk_codigo_servicios1) VALUES (1,5);
+INSERT INTO manzanas_servicios ( fk_codigo_manzanas1 ,fk_codigo_servicios1) VALUES (2,1);
+INSERT INTO manzanas_servicios ( fk_codigo_manzanas1 ,fk_codigo_servicios1) VALUES (3,3);
+INSERT INTO manzanas_servicios ( fk_codigo_manzanas1 ,fk_codigo_servicios1) VALUES (3,5);
+
+INSERT INTO usuario (Tipo_documento, Documento, Nombres, Apellidos, Telefono, Email, Ciudad, Direccion_usu, Ocupacion, Rol, fk_Codigo_manzanas)
+VALUES ('CC', 12345678190, 'ANA', 'Apellido', 1234567890, 'correo@ejemplo.com', 'Ciudad', 'Direccion', 'Ocupacion', 'Usuario', 1);
+
+INSERT INTO usuario (Tipo_documento, Documento, Nombres, Apellidos, Telefono, Email, Ciudad, Direccion_usu, Ocupacion, Rol, fk_Codigo_manzanas)
+VALUES ('CC', 2, 'ANA2', 'Apellido', 22, 'correo@ejemplo.com', 'Ciudad', 'Direccion', 'Ocupacion', 'Usuario', 2);
+
+
+
+
+alter table usuario ADD UNIQUE (Documento)
+
+
+
+
+select * from solicitudes;
+select * from usuario;
+SELECT * FROM servicios;
+SELECT * FROM solicitudes;
+SELECT * FROM manzanas_servicios;
+SELECT * FROM manzanas;
+

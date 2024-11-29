@@ -1,0 +1,178 @@
+<!-- Que debe tener el administrador
+Actualizar servicios->eliminar o crear "adjuntar servicios a otra manzana"
+Traer los servicios de la manzana y un boton para añadir servicios
+Crear nuevas manzanas->añadir la nueva manzana al registro
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manzanas Del Cuidado</title>
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <script src="../JS/Administrador/Asignar_servicios_a_Manzana.js"></script>
+    <script src="../JS/Administrador/cerrar_sesion.js"></script>
+    <script src="../JS/Administrador/funcion_crear_servicios.js"></script>
+    <script src="../JS/Administrador/Funcion_edicion_usuarios.js"></script>
+    <script src="../JS/Administrador/Crear_Manzana.js"></script>
+
+</head>
+<header class="Encabezado">
+    <a href="#" class="logo">
+        <img class="logo" src="../assets/Logo/logo-icono-mnz-morado-2_.svg">
+        <h2 class="nombre-empresa">Manzanas del cuidado</h2>
+    </a>
+    <nav>
+        <a href="index.htm" class="nav-link">| Inicio |</a>
+    </nav>
+</header>
+
+<body>
+    <video src="../assets/Videos/Manzanas del cuidado video promo.mp4" autoplay muted loop class="background"></video>
+
+
+
+    <div class="contenedor-form">
+        <div class="usu">
+
+
+
+            <div class="centrar">
+                <h1>Bienvenid@ Administrador <span id="Nombre-Usuario"></span></h1>
+
+
+            </div>
+            <div class="centrar2">
+
+                <button id="Consultar_usuarios">Consultar Usuarios</button>
+
+                <br><br>
+
+                <br><br>
+                <button id="Ver_servicios">crear servicios</button>
+
+                <br><br>
+                <button id="Unir_Manzana_servicio">Asignar servicios</button>
+
+                <br><br>
+                <button id="Crear_Manzana">Crear Manzana</button>
+
+                <br><br>
+                <button id="Cerrar_sesion">Cerrar sesion</button>
+
+
+
+
+            </div>
+
+            <form action="http://localhost:3000/Lista-Usuarios-Guardados" id="Usuarios_guardados">
+                <div id="Usuarios" style="display: none;">
+                    <table id="Tabla_usuarios_guardados">
+                        <thead>
+                            <tr>
+                                <th>Codigo_mujer</th>
+                                <th>Nombre</th>
+                                <th>Tipo_de_documento</th>
+                                <th>Documento</th>
+                                <th>Correo</th>
+                                <th>Telefono</th>
+                                <th>Codigo_de_manzana</th>
+                                <th>Manzana</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Lista_Usuarios"></tbody>
+                    </table>
+                    <button type="button" id="btnCancelarGuardado">Cancelar</button>
+
+                </div>
+            </form>
+
+
+            <form action="http://localhost:3000/Lista_servicios_creados" id="Creacion_servicios">
+                <div id="Crear_servicios" style="display: none;">
+                    <button id="btnCrearNuevoServicio">Crear Nuevo Servicio</button>
+                    <table id="Tabla_creacion_servicios">
+                        <thead>
+                            <tr>
+                                <th>Codigo_servicios</th>
+                                <th>Nombre_servicio</th>
+                                <th>Tipo_servicio</th>
+                                <th>Descripcion</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla_servicios_creados"></tbody>
+                    </table>
+                    <button type="button" id="btnCancelarGuardado3">Cancelar</button>
+                </div>
+            
+                <!-- Formulario para crear un nuevo servicio -->
+                <div id="formularioNuevoServicio" style="display: none;">
+                    <h3>Crear Nuevo Servicio</h3>
+                    <input type="text" id="nuevo_codigo" placeholder="Código de Servicio" required><br>
+                    <input type="text" id="nuevo_nombre" placeholder="Nombre del Servicio" required><br>
+                    <input type="text" id="nuevo_tipo" placeholder="Tipo de Servicio" required><br>
+                    <input type="text" id="nueva_descripcion" placeholder="Descripción" required><br>
+                    <button onclick="GuardarServicio()">Crear Servicio</button>
+                    <button type="button" id="btnCancelarCreacion">Cancelar</button>
+                </div>
+            </form>
+
+            <form action="http://localhost:3000/Asignar_Manzana_Servicio" id="Unir_MYS">
+                <div id="Manzana_Servicio" style="display: none;">
+                    <table id="Tabla_Man_Ser">
+                        <thead>
+                            <tr>
+                                <th>Codigo_de_manzana</th>
+                                <th>Codigo_servicios</th>                     
+                            </tr>
+                        </thead>
+                        <tbody id="Tabla_manzanas_y_servicios"></tbody>
+                    </table>
+                    <button type="button" id="btnCancelarGuardado4">Cancelar</button>
+
+                </div>
+            </form>
+
+            <form action="http://localhost:3000/Crear_manzana" id="Manzana">
+                <div id="Contenedor_manzana" style="display: none;">
+                    <button id="btnCrearNuevaManzana">Crear Nueva Manzana</button>
+                    <table id="TablaCrearManzanas">
+                        <thead>
+                            <tr>
+                                <th>Nombre de Manzana</th>           
+                                <th>Localidad</th>        
+                                <th>Dirección</th>                  
+                            </tr>
+                        </thead>
+                        <tbody id="TablaCrearManzana"></tbody>
+                    </table>
+                    <button type="button" id="btnCancelarGuardado5">Cancelar</button>
+                </div>
+
+                <div id="formularioNuevaManzana" style="display: none;">
+                    <h3>Crear Nueva Manzana</h3>
+                    <input type="text" id="nuevo_codigo_manzana" placeholder="Código de Manzana" required><br>
+                    <input type="text" id="nuevo_nombre_manzana" placeholder="Nombre de la Manzana" required><br>
+                    <input type="text" id="nueva_localidad" placeholder="Localidad" required><br>
+                    <input type="text" id="nueva_direccion" placeholder="Dirección" required><br>
+                    <button onclick="GuardarManzana()">Crear Manzana</button>
+                    <button type="button" id="btnCancelarCreacionManzana">Cancelar</button>
+                </div>
+            </form>
+            
+
+           
+        </div>
+    </div>
+
+
+
+</body>
+<footer>
+    <p>2024.Derechos Reservados</p>
+</footer>
+
+</html>

@@ -1,0 +1,798 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+  }
+
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    display: flex;   
+    height: 70px;
+    background-color: white;
+    justify-content: space-between;
+    color: blueviolet;
+    padding: 10px;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+    margin-right: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: rgb(165, 100, 226);
+    text-decoration: underline;
+}
+
+@media (max-width:700px) {
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+footer{
+    display: flex;   
+    height: 70px;
+    background-color: white;
+    justify-content: center;
+    color: blueviolet;
+    padding: 10px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.contenedor-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 81%;
+}
+
+.img-index{
+    width:50%;
+    height:280px;
+}
+
+.contenedor-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 81%; 
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.content-formu{
+    color: blueviolet;
+    font-size: 20px;
+    border-radius: 10%;
+    width: 520px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(240, 240, 240);
+    border-radius: 5%;
+}
+option{
+    border-radius: 5%;
+}
+
+.boton{
+    background-color: blueviolet;
+    border-radius: 5%;
+    color: white;
+    text-decoration: none;
+    width: 90px;
+    height: 30px;
+    margin: 30px 10px;
+}
+/* .contenedor-boton{
+    display: inline-flex;
+    justify-items: center;
+    align-items: center;
+    margin-left: 30%;
+} */
+.boton a{
+color: aliceblue;
+}
+
+.centrar
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centrar2
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton2{
+    background-color: blueviolet;
+    border-radius: 5%;
+    color: white;
+    text-decoration: none;
+    width: 120px;
+    height: 30px;
+    margin: 30px 10px;
+}
+
+.usu
+{
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(240, 240, 240);
+}
+
+/* Tabla de la seleccion y envio de servicios */
+
+
+.servicios
+{
+    background-color: white;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+}
+
+.Seleccionar
+{
+
+    border: 1px solid black;
+}
+
+.SeleccionarS
+{
+    border: 2px solid black;
+    border-style: dashed;
+    width: 100px;
+    height: 50px;
+}
+
+#DesplegarServicios
+{
+    background-color: blueviolet;
+    border-radius: 5%;
+    color: white;
+    text-decoration: none;
+    width: 120px;
+    height: 30px;
+    margin: 30px 10px;
+}
+#Listar_servicios
+{
+    background-color: blueviolet;
+    border-radius: 5%;
+    color: white;
+    text-decoration: none;
+    width: 120px;
+    height: 30px;
+    margin: 30px 10px;
+}
+/* Botones administrador */
+
+#Consultar_usuarios{
+    background-color: blueviolet;
+    border-radius: 5%;
+    color: white;
+    text-decoration: none;
+    width: 120px;
+    height: 30px;
+    margin: 30px 10px;
+}
+#btnServicios{
+    background-color: blueviolet;
+    border-radius: 5%;
+    color: white;
+    text-decoration: none;
+    width: 90px;
+    height: 30px;
+    margin: 30px 10px;
+}
+#CerrarSesion{
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    width: 90px;
+    height: 30px;
+    margin: 30px 10px;
+}
+
+#Ver_servicios{
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    width: 90px;
+    height: 30px;
+    margin: 30px 10px;
+}
+
+#Unir_Manzana_servicio{
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    width: 90px;
+    height: 30px;
+    margin: 30px 10px;
+}
+#Cerrar_sesion{
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    width: 90px;
+    height: 30px;
+    margin: 30px 10px;
+}
+
+#btnCrearNuevoServicio{
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    width: 90px;
+    height: 30px;
+    margin: 30px 10px;
+}
+
+#Crear_Manzana{
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    width: 90px;
+    height: 30px;
+    margin: 30px 10px;
+}
+
+
+
+/* CCS del formulario para obtener los usuario */
+
+.contenedor-form {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#Usuarios_guardados {
+    width: auto; 
+    max-width: 100%; 
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Permite desplazarse de se necesario */
+}
+
+/* La tabla se ajusta al contenido automáticamente */
+#Tabla_usuarios_guardados {
+    width: auto; 
+    border-collapse: collapse;
+    table-layout: auto; /* Permite que las columnas se ajusten al contenido dinámico */
+}
+
+/* Define un estilo más agradable para las celdas */
+#Tabla_usuarios_guardados th,
+#Tabla_usuarios_guardados td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+    word-wrap: break-word; /* Permite ajustar palabras largas */
+    white-space: nowrap; /* Previene saltos de línea si es innecesario */
+}
+
+/* Estilo para los th */
+#Tabla_usuarios_guardados th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Para los inputs dentro de las celdas */
+#Tabla_usuarios_guardados input[type="text"] {
+    width: 100%; /* Ocupa el espacio disponible dentro de la celda */
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Ajustes para los botones dentro de las celdas */
+#Tabla_usuarios_guardados button {
+    width: auto; /* Se adapta automáticamente al contenido */
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#Tabla_usuarios_guardados button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo adicional para inputs en focus */
+#Tabla_usuarios_guardados td input[type="text"]:focus {
+    border-color: #002144;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilos para la tabla de creación de servicios */
+#Tabla_creacion_servicios {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#Tabla_creacion_servicios th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+}
+
+#Tabla_creacion_servicios td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#Tabla_creacion_servicios tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#Tabla_creacion_servicios tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para el contenedor */
+#Crear_servicios {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Estilos para los inputs y botones dentro de la tabla */
+#Tabla_creacion_servicios input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#Tabla_creacion_servicios button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#Tabla_creacion_servicios button:hover {
+    background-color: #45a049;
+}
+
+
+/* Estilos generales para el contenedor */
+#formularioNuevoServicio, #Manzana_Servicio {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos para los campos de entrada del formulario */
+#formularioNuevoServicio input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#formularioNuevoServicio button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#formularioNuevoServicio button[type="button"] {
+    background-color: #f44336;
+}
+
+#formularioNuevoServicio button:hover {
+    opacity: 0.9;
+}
+
+/* Estilos para la tabla Manzana-Servicio */
+#Manzana_Servicio {
+    margin-top: 20px;
+}
+
+#Tabla_Man_Ser {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#Tabla_Man_Ser th, #Tabla_Man_Ser td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#Tabla_Man_Ser th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#Tabla_Man_Ser tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#Tabla_Man_Ser tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para las filas de la tabla */
+#Tabla_manzanas_y_servicios {
+    margin-top: 10px;
+}
+
+/* Contenedor general */
+#Manzana {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Estilo para el contenedor de manzanas */
+#Contenedor_manzana {
+    margin-bottom: 20px;
+}
+
+/* Estilo para el botón "Crear Nueva Manzana" */
+#btnCrearNuevaManzana {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el mouse sobre el botón */
+#btnCrearNuevaManzana:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para la tabla de manzanas */
+#TablaCrearManzanas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para las celdas de la tabla */
+#TablaCrearManzanas th, #TablaCrearManzanas td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para las cabeceras de la tabla */
+#TablaCrearManzanas th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Estilo para el formulario de creación de manzana */
+#formularioNuevaManzana {
+    display: none; /* Por defecto está oculto */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilo para los campos de entrada del formulario */
+#formularioNuevaManzana input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Asegura que el padding no se sobreponga */
+}
+
+/* Estilo para el botón de creación de manzana */
+#formularioNuevaManzana button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Estilo para el botón de cancelación */
+#formularioNuevaManzana #btnCancelarCreacionManzana {
+    background-color: #dc3545; /* Rojo */
+    margin-left: 10px;
+}
+
+#formularioNuevaManzana button:hover {
+    background-color: #0056b3;
+}
+
+#formularioNuevaManzana #btnCancelarCreacionManzana:hover {
+    background-color: #c82333;
+}
+
+
+/* Boton de cancelacion */
+#btnCancelarGuardado {
+    background-color: #dc3545; /* Rojo */
+    margin-left: 10px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#btnCancelarGuardado:hover {
+    background-color: #c82333;
+}
+
+
+#btnCancelarGuardado2 {
+    background-color: #dc3545; /* Rojo */
+    margin-left: 10px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#btnCancelarGuardado2:hover {
+    background-color: #c82333;
+}
+
+
+#btnCancelarGuardado3 {
+    background-color: #dc3545; /* Rojo */
+    margin-left: 10px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#btnCancelarGuardado3:hover {
+    background-color: #c82333;
+}
+
+#btnCancelarGuardado4 {
+    background-color: #dc3545; /* Rojo */
+    margin-left: 10px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#btnCancelarGuardado4:hover {
+    background-color: #c82333;
+}
+
+#btnCancelarGuardado5 {
+    background-color: #dc3545; /* Rojo */
+    margin-left: 10px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#btnCancelarGuardado5:hover {
+    background-color: #c82333;
+}
+
+
+
+/* Estilos para el formulario de selección de servicios */
+#formularioSeleccionServicio {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Estilo para el contenedor de servicios */
+#servicios {
+    margin-bottom: 20px;
+}
+
+/* Estilo para la tabla de servicios */
+#Tabla_servicios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para las celdas de la tabla */
+#Tabla_servicios th, #Tabla_servicios td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para las cabeceras de la tabla */
+#Tabla_servicios th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Estilo para los campos de fecha y hora */
+#FechaHora {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón de envío */
+#formularioSeleccionServicio input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Estilo para el botón de envío al pasar el mouse */
+#formularioSeleccionServicio input[type="submit"]:hover {
+    background-color: #20ac01;
+}
+
+/* Estilos para el segundo formulario (servicios guardados) */
+#Servicio_Guardados {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Estilo para el contenedor de servicios guardados */
+#Servicios_2 {
+    margin-top: 20px;
+}
+
+/* Estilo para la tabla de servicios guardados */
+#Tabla_servicios_guardados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para las celdas de la tabla de servicios guardados */
+#Tabla_servicios_guardados th, #Tabla_servicios_guardados td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para las cabeceras de la tabla de servicios guardados */
+#Tabla_servicios_guardados th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}

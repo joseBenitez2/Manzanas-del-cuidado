@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manzanas Del Cuidado</title>
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <script src="../JS/Registro-ingreso/Seleccion_de_manzana.js"></script>
+</head>
+
+<body>
+    <header class="Encabezado">
+        <a href="#" class="logo">
+            <img class="logo" src="../assets/Logo/logo-icono-mnz-morado-2_.svg">
+            <h2 class="nombre-empresa">Manzanas del cuidado</h2>
+        </a>
+
+        
+    </header>
+    <video src="../assets/Videos/Manzanas del cuidado video promo.mp4" autoplay muted loop class="background"></video>
+
+    <div class="contenedor-form">
+        <div class="content-formu">
+
+            <form action="http://localhost:3000/crear" method="POST" >
+
+                <div class="centrar">
+                    <h1>Registre sus datos</h1><br>
+
+                    <label name="Nombres">Nombres</label>
+                    <input type="text" name="Nombres">
+                    <br>
+
+                    <label for="Tipo">Tipo De Documento</label>
+                    <select name="Tipo_documento" id="">
+                        <option value="TI">TI</option>
+                        <option value="CC">CC</option>
+                    </select>
+                    <br>
+
+                    <label name="Documento">Documento</label>
+                    <input type="number" name="Documento">
+                    <br>
+
+                    <label name="Telefono">Telefono</label>
+                    <input type="number" name="Telefono">
+                    <br>
+
+                    <label for="Tipo">Rol</label>
+                    <select name="Rol" id="">
+                        <option value="Usuario">Usuario</option>
+                        <option value="Administrador">Administrador</option>
+                    </select>
+                    <br>
+
+                    <label for="fk_Codigo_manzanas">Manzana</label>
+                    <select name="fk_Codigo_manzanas" id="select-localidades">
+                    </select>
+
+                    <div class="contenedor-boton">
+                        <input class="boton" type="submit" value="Enviar">
+                        <a href="./index.htm"><input class="boton" type="button" value="Atras"></a>
+                    </div>
+
+                </div>
+        </div>
+        </form>
+    </div>
+
+   
+    </div>
+    <footer>
+        <p>2024.Derechos Reservados</p>
+    </footer>
+</body>
+
+</html>

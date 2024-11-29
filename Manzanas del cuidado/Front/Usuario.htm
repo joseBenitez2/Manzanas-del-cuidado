@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manzanas Del Cuidado</title>
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <script src="../JS/Usuario/Nombre_del_usuario.js"></script>
+    <script src="../JS/Usuario/Traer_servicios_seleccionables.js"></script>
+    <script src="../JS/Usuario/CerrarSesion.js"></script>
+</head>
+<header class="Encabezado">
+    <a href="#" class="logo">
+        <img class="logo" src="../assets/Logo/logo-icono-mnz-morado-2_.svg">
+        <h2 class="nombre-empresa">Manzanas del cuidado</h2>
+    </a>
+    <nav>
+        <a href="index.htm" class="nav-link">| Inicio |</a>
+    </nav>
+</header>
+
+<body>
+    <video src="../assets/Videos/Manzanas del cuidado video promo.mp4" autoplay muted loop class="background"></video>
+
+
+
+    <div class="contenedor-form">
+        <div class="usu">
+
+
+
+            <div class="centrar">
+                <h1>Bienvenid@ <span id="Nombre-Usuario"></span></h1>
+
+            </div>
+            <div class="centrar2">
+
+                <button id="DesplegarServicios">Lista de servicio</button>
+
+                <br><br>
+
+                <br><br>
+                <button id="btnServicios">Mis servicios</button>
+
+
+                <br><br>
+                <button id="CerrarSesion">Cerrar sesion</button>
+
+            </div>
+            <form action="http://localhost:3000/Guardar-Servicios-Usu" id="formularioSeleccionServicio">
+                <div id="servicios" style="display: none;">
+                    <table id="Tabla_servicios">
+                        <thead>
+                            <tr>
+                                <th class="Seleccionar">Servicios</th>
+                                <th class="Seleccionar">Seleccionar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Lista_servicios"></tbody>
+                    </table>
+
+                    <br>
+                    <input type="datetime-local" id="FechaHora" required>
+
+                    <input type="submit" value="Guardar servicio">
+                    <button type="button" id="btnCancelarGuardado">Cancelar</button>
+
+
+                </div>
+            </form>
+            <form action="http://localhost:3000/Listar-servicios-usuario" id="Servicio_Guardados">
+                <div id="Servicios_2" style="display: none;">
+                    <table id="Tabla_servicios_guardados">
+                        <thead>
+                            <tr>
+                                <th>Codigo de solicitud</th>
+                                <th>Servicios</th>
+                                <th>Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody id="servicios_lista"></tbody>
+
+                    </table>
+                    <button type="button" id="btnCancelarGuardado2">Cancelar</button>
+
+
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+<footer>
+    <p>2024.Derechos Reservados</p>
+</footer>
+
+</html>
